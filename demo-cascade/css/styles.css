@@ -1,0 +1,106 @@
+footer{
+    background-color: #333;
+    color: yellow
+}
+
+/******************************
+make a specific class with your css rule
+******************************/
+ .nav-background{
+    background-color: #ddd;
+}
+
+/****************************
+decendant selector
+***************************/
+nav ul{
+    background-color: #ddd;
+}
+
+/************************************************
+specificity:
+ it is a value assigned to the selector depending on meeting
+ different criteria
+ 
+ selector type
+ element selector get a value of 1
+ class selector get a value of 10
+ id selector get a value of 100
+ SPECIAL NOTE: All inline styling gets a value of 1000
+
+ Specificity decision are based on the value of the selector
+
+ If the specificity of conflicting rules is the same then
+ the last coded rule wins
+ **********************************************/
+
+footer,
+footer a{
+    color: white;
+}
+
+/**********************************************
+first set element select li to a border-bottom
+
+concern: BOTH nav and footer li were affected
+
+solutions:
+a) use a decendant selector (nav li > li)
+b) use a class selector (li-border > li) 10 > 1; as a targeted class
+********************************************/
+.li-border{
+    border-bottom: 1px solid black;
+}
+
+nav ul li{
+    border-bottom: 1px dotted black;
+}
+
+nav ul li a{
+
+    text-decoration: none;
+    color: #333;
+}
+
+/***************************************************
+Classes:
+syntax is .user-name { rules}
+you are not to use element name
+user name must be meaningful AND may include the elemnt name
+classes can be attached to any element
+classes are independent of an element
+on html page, to use: <element class="username [ username2 ....]}
+
+types: user (targeted) class
+        pseudo class, are attached to elements
+
+example: anchor tag
+NOTE: the order in which you code your pseudo classes for the 
+        anchor tag is EXTREMELY IMPORTANT
+
+a:link      unused link
+a:visited   used when the anchor tag link has been has beem clicked on previously
+a:hover     used when your cursor hover over the anchor tag link
+a:active    used when you are actually clicking the anchor tag link
+************************************************/
+
+nav ul li a:hover{
+    color:blue;
+    font-weight:bold;
+    font-size:larger;
+}
+nav ul li a:visited{
+    color:green;
+}
+nav ul li a:active{
+    color:red;
+}
+
+ul li{
+    list-style-type: none;
+    padding: 0px;
+}
+
+footer ul li{
+    padding: 10px;
+}
