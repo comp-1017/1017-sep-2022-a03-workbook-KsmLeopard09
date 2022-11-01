@@ -57,10 +57,10 @@ What is the required width of section?
 
 box model
 
-960 = 30 + 2 + 0 + content + 0 + 2 + 30
-960 = content + 64
-content = 960-64
-content = 896
+960 = 30 + 2 + 0 + width + 0 + 2 + 30
+960 = width + 64
+width = 960-64
+width = 896
 *********************************************************************/
 
 main section{
