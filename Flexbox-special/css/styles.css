@@ -57,7 +57,7 @@ h1 {
 main{
     background-color: lightgray;
     display: flex;
-     flex-wrap: wrap; 
+    flex-wrap: wrap; 
 }
 
 
